@@ -1,0 +1,145 @@
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+<h1 align="center">Editar Empleado</h1>
+<div>
+  <form action="/Empleados/edit-employee/{{emplo._id}}?_method=PUT" method="POST">
+  <input type="hidden" name="_method" method="PUT">
+  <div>
+    <label for="">No. Empleado</label> <br>
+    <label><strong>{{emplo.NoEmpleado}}</strong></label>
+  </div>
+  <div>
+    <label for="">Activo</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Activo}}</textarea>
+  </div>
+  <div>
+    <label for="">Nombre</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Nombre}}</textarea>
+  </div>
+  <div>
+    <label for="">Primer Apellido</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.PrimerApellido}}</textarea>
+  </div>
+  <div>
+    <label for="">Segundo Apellido</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.SegundoApellido}}</textarea>
+  </div>
+  <div>
+    <label for="">Email</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Email}}</textarea>
+  </div>
+  <div>
+    <label for="">Fecha de Entrevista</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.FechaEntrevista}}</textarea>
+  </div>
+   <div>
+    <label for="">Dirección</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Direccion}}</textarea>
+  </div>
+  <div>
+    <label for="">Colonia</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Colonia}}</textarea>
+  </div>
+  <div>
+    <label for="">Municipio</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Municipio}}</textarea>
+  </div>
+  <div>
+    <label for="">C.P.</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.CP}}</textarea>
+  </div>
+  <div>
+    <label for="">Estado</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Estado}}</textarea>
+  </div>
+  <div>
+    <label for="">País</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Pais}}</textarea>
+  </div>
+  <div>
+    <label for="">Fecha de Nacimiento</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.FechaNacimiento}}</textarea>
+  </div>
+  <div>
+    <label for="">Estado de Nacimiento</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.EstadoNacimiento}}</textarea>
+  </div>
+  <div>
+    <label for="">Nacionalidad</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Nacionalidad}}</textarea>
+  </div>
+  <div>
+    <label for="">Género</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Genero}}</textarea>
+  </div>
+  <div>
+    <label for="">Estado Civil</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.EstadoCivil}}</textarea>
+  </div>
+  <div>
+    <label for="">Nivel de Estudios</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.NivelEstudios}}</textarea>
+  </div>
+  <div>
+    <label for="">Celular Personal</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.CelularP}}</textarea>
+  </div>
+  <div>
+    <label for="">IMEI</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.IMEI}}</textarea>
+  </div>
+  <div>
+    <label for="">CEDIS</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.CEDIS}}</textarea>
+  </div>
+  <div>
+    <label for="">Puesto</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Puesto}}</textarea>
+  </div>
+  <div>
+    <label for="">IMSS</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.IMSS}}</textarea>
+  </div>
+  <div>
+    <label for="">CURP</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.CURP}}</textarea>
+  </div>
+  <div>
+    <label for="">RFC</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.RFC}}</textarea>
+  </div>
+  <div>
+    <label for="">Constancias</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Constancias}}</textarea>
+  </div>
+  <div>
+    <label for="">Retención Infonavit</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Retencion_Info}}</textarea>
+  </div>
+  <div>
+    <label for="">Comprobante de Estudios</label>
+    <textarea type="text" name="title" class="form-control">{{emplo.Comprobante_Estudios}}</textarea>
+  </div>
+  <div>
+    <label for="">Fecha de Actualiación</label>
+    <label><strong>{{emplo.Date}}</strong></label>
+  </div>
+  
+
+
+
+
+
+  <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+</div>

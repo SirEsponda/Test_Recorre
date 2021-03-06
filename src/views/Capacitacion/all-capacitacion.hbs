@@ -1,0 +1,33 @@
+<div class="row">
+    {{#each empleado }}
+        <div class="col-md-6" >
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">{{ NoEmpleado }}</h1>
+            <table>
+                <tr>
+                    <td>
+                    <p>{{ Calificacion }}</p>
+                    <p>{{ VideoBienvenida }}</p>
+                    <p>{{ Video5Bases }}</p>
+                    <p>{{ VideoEcosistema }}</p>
+                    <p>{{ Onboarding }}</p>
+                    <p>{{ FechaCapacitacionCliente }}</p>
+                    <p>{{ FechaCapacitacionSupervisor }}</p>
+                    <p>{{ FechaTerminoCapacitacion }}</p>
+                    <label for="">Fecha de Registro</label>
+                    <P>{{ Date }}</p>
+                    </td>
+                    
+                </tr>
+             </table>
+        </div>
+       </div>
+ </div>
+{{/each}}
+<p>
+<div class="form.group">
+<a href="http://localhost:3000/capacitacion/add" class="btn btn-primary btn-lg">Agregar Nueva Capacitación</a>    
+</div>
+</p> 
+</div>

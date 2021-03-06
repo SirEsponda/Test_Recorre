@@ -1,0 +1,76 @@
+{{#each errors}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/each}}
+<div class="col-md-4 mx-auto">
+</div>
+<div class="title">
+    <div class="dato_personales-header">
+    <h1 class="text-center display-4 my-4"> <strong>Documentos del Trabajador</strong></h1>
+    </div>
+    <div class="body">
+        <form action="/Files/new-files" method="POST" enctype="multipart/form-data">
+        <div>
+                    <labe for="No.Empleado">No. Empleado</label>
+                    <input type="text" name="NoEmpleado" autofocus>
+                </div>
+         <table>
+            <tr>
+                <td>
+                <div>
+                    <label for="">Foto Empleado</label><br>
+                    <input type="file" name="avatar" >
+                </div>
+
+                <div>
+                    <label for="">INE</label><br>
+                    <input type="file" name="INE" >
+                </div>
+                <div>
+                    <label for="">IMSS</label><br>
+                    <input type="file" name="IMSS" >
+                </div>
+                <div>
+                    <label for="">CURP</label><br>
+                    <input type="file" name="CURP" >
+                </div>
+                <div>
+                    <label for="">RFC</label><br>
+                    <input type="file" name="RFC" >
+                </div>
+                </td>
+                <td>
+                <div>
+                    <label for="">Comprobante de Domicilio</label><br>
+                    <input type="file" name="CompDomi" >
+                </div>
+
+                <div>
+                    <label for="">Acta de Nacimiento</label><br>
+                    <input type="file" name="ActaNacimiento" >
+                </div>
+                <div>
+                    <label for="">Licencia de Conducir</label><br>
+                    <input type="file" name="Licencia" >
+                </div>
+                <div>
+                    <label for="">Comprobante de Banco</label><br>
+                    <input type="file" name="Banco" >
+                </div>
+                <div>
+                    <label for="">Credencial</label><br>
+                    <input type="file" name="Credencial" >
+                </div>
+                </td>
+                 </tr>
+    </table>
+    <br>
+    <div>
+     <input type="submit" value="Enviar">
+     </div>
+ </form>
+    </div>        
+    </div>
+</div>

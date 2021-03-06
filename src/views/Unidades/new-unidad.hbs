@@ -1,0 +1,118 @@
+{{#each errors}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/each}}
+<div class="col-md-4 mx-auto">
+</div><div class="title">
+<div class="dato_unidades-header">
+    <h1 class="text-center display-4 my-4"> <strong>Unidades</strong></h1>
+    </div>
+    <div class="body">
+    <form action="/Unidades/new-unidad" method="POST">
+        <div class="form.group">
+            <table>
+            <tr>
+              <td>
+                    <p>
+                        <labe for="No.Unidad">No. Unidad</label>
+                        <input type="text" name="No. Unidad" autofocus>
+                    </p>
+                    <p>
+                        <label for="Placas">Placas</label>
+                        <input type="text" name="Placas"> 
+                    </p>
+                    <p>
+                        <label for="No Circula">No Circula</label>
+                        <input type="text" name="No Circula"> 
+                    </p>
+                    <p>
+                        <label for="Verificacion">Verificacion</label>
+                        <input type="text" name="Verificacion"> 
+                    </p>
+                    <p>
+                        <label for="Valor Factura">Valor Factura</label>
+                        <input type="text" name="Valor Factura"> 
+                    </p>
+                    <p>
+                        <label for="Serie">Serie</label>
+                        <input type="text" name="Serie"> 
+                    </p>
+                    <p>
+                        <label for="Marca">Marca</label>
+                        <input type="text" name="Marca"> 
+                    </p>
+                    <p>
+                        <label for="SubMarca">SubMarca</label>
+                        <input type="text" name="SubMarca"> 
+                    </p>
+                    <p>
+                        <label for="Modelo">Modelo</label>
+                        <input type="text" name="Modelo"> 
+                    </p>
+                    <p>
+                        <label for="NoMotor">NoMotor</label>
+                        <input type="text" name="NoMotor"> 
+                    </p>
+                    </td>
+                    <td>
+                    <p>
+                        <labe for="Poliza">Poliza</label>
+                        <input type="text" name="Poliza" autofocus>
+                    </p>
+                    <p>
+                        <label for="Seguro">Seguro</label>
+                        <input type="text" name="Seguro"> 
+                    </p>
+                    <p>
+                        <label for="Vigencia">Vigencia</label>
+                        <input type="text" name="Vigencia"> 
+                    </p>
+                    <p>
+                        <label for="Beneficiario">Beneficiario</label>
+                        <input type="text" name="Beneficiario"> 
+                    </p>
+                    <p>
+                        <label for="Prestamo">Prestamo o Arrendamiento</label>
+                        <input type="text" name="Prestamo"> 
+                    </p>
+                    <p>
+                        <label for="Credito">Crédito o Arrendamiento</label>
+                        <input type="text" name="Credito"> 
+                    </p>
+                    <p>
+                        <label for="Mensualidad">Mensualidad</label>
+                        <input type="text" name="Mensualidad"> 
+                    </p>
+                    <p>
+                        <label for="Plazo">Plazo</label>
+                        <input type="text" name="Plazo"> 
+                    </p>
+                    <p>
+                        <label for="Contrato">Contrato</label>
+                        <input type="text" name="Contrato"> 
+                    </p>
+                    <p>
+                        <label for="FormaPag">FormaPag</label>
+                        <input type="text" name="FormaPag"> 
+                    </p>
+                    </td>
+                    <td>
+                      <p>
+                        <label for="OBD2">OBD2 Tom Tom</label>
+                        <input type="text" name="OBD2"> 
+                    </p>
+                    </td>
+               </tr>
+    </table>
+    </div> 
+    <div class="form.group">
+    <button class="btn btn-primary btn-block" type="submit">
+            Save
+        </button> 
+    </div>
+</form>
+</div>        
+</div>
+</div>

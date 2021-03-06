@@ -1,0 +1,97 @@
+<div class="row">
+    
+    <div>
+        <table id="TableDatos" class="" cellspacing="5" border="3" style="border-collapse:separate" align="center" style="will-change: auto;">
+            
+             <tbody>
+                 <tr align="center" style="background-color: honeydew;">
+                        <th scope="col">No. Empleado</th>
+                        <th scope="col">Activo</th>
+                        <th scope="col">Nombre(s)</th>
+                        <th scope="col">Primer Apellido</th>
+                        <th scope="col">Segundo Apellido</th>
+                        <th scope="col">Correo Electrónico</th>
+                        <th scope="col">Fecha de Entrevista</th>
+                        <th scope="col">Direccion (Calle y Número)</th>
+                        <th scope="col">Colonia</th>
+                        <th scope="col">Municipio</th>
+                        <th scope="col">Código Postal</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">País</th>
+                        <th scope="col">Fecha de Nacimiento</th>
+                        <th scope="col">Estado de Nacimiento</th>
+                        <th scope="col">Nacionalidad</th>
+                        <th scope="col">Género</th>
+                        <th scope="col">Estado Civil</th>
+                        <th scope="col">Nivel de Estudios</th>
+                        <th scope="col">Celular Personal</th>
+                        <th scope="col">IMEI</th>
+                        <th scope="col">CEDIS</th>
+                        <th scope="col">Puesto</th>
+                        <th scope="col">IMSS</th>
+                        <th scope="col">CURP</th>
+                        <th scope="col">RFC</th>
+                        <th scope="col">Constancias</th>
+                        <th scope="col">Aviso de retención Infonavit</th>
+                        <th scope="col">Comprobantes de Estudios</th>
+                        <th scope="col">Fecha del Registro</th>
+                        <th scope="col">Editar Empleado</th>
+                        <th scope="col">Eliminar Empleado</th>
+                    </tr>  
+                    {{#each empleado }}
+                    <tr style="background-color:honeydew" align="center" style="width: auto;" style="height: auto;">
+                        <td>{{ NoEmpleado }}
+                            <a href="/datos/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                        </td>
+                        <td>{{ Activo }}</td>
+                        <td>{{ Nombre }}</td>
+                        <td>{{ PrimerApellido }}</td>
+                        <td>{{ SegundoApellido }}</td>
+                        <td>{{ Email }}</td>
+                        <td>{{ FechaEntrevista }}</td>
+                        <td>{{ Direccion }}</td>
+                        <td>{{ Colonia }}</td>
+                        <td>{{ Municipio }}</td>
+                        <td>{{ CP }}</td>
+                        <td>{{ Estado }}</td>
+                        <td>{{ Pais }}</td>
+                        <td>{{ FechaNacimiento }}</td>
+                        <td>{{ EstadoNacimiento }}</td>
+                        <td>{{ Nacionalidad }}</td>
+                        <td>{{ Genero }}</td>
+                        <td>{{ EstadoCivil }}</td>
+                        <td>{{ NivelEstudios }}</td>
+                        <td>{{ CelularP }}</td>
+                        <td>{{ IMEI }}</td>
+                        <td>{{ CEDIS }}</td>
+                        <td>{{ Puesto }}</td>
+                        <td>{{ IMSS }}</td>
+                        <td>{{ CURP }}</td>
+                        <td>{{ RFC }}</td>
+                        <td>{{ Constancias }}</td>
+                        <td>{{ Retencion_Info }}</td>
+                        <td>{{ Comprobante_Estudios }}</td>
+                        <td>{{Date}}</td>
+                        <td>
+                         <a href="/datos/edit/{{_id}}"><i class="fas fa-edit"> Editar Empleado</i></a>
+                        </td>
+                        <td> 
+                        <form action="/datos/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+        </form>
+                        </td>
+                        {{/each}}
+                </tbody>
+        </table>
+    </div>
+    
+ <nav class="Navegacion Principal contenedor" align="center"> 
+    
+        <a href="http://localhost:3000/datos/add" class="btn btn-primary btn-lg">Agregar Nuevo Empleado</a>  
+       <input type="button" onclick="tableToExcel('TableDatos', 'Datos Personales del Trabajador')" value="Export to Excel">
+         <a href="http://localhost:3000/datos/find" class="btn btn-primary btn-lg">Buscar Empleado</a> 
+   
+</nav> 
+</div>       
+               <script src="src/TableExcel.js"></script>

@@ -1,0 +1,69 @@
+{{#each errors}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/each}}
+<div class="col-md-4 mx-auto">
+</div><div class="title">
+<div class="dato_personales-header">
+    <h1 class="text-center display-4 my-4"> <strong>Capacitación</strong></h1>
+    </div>
+    <div class="body">
+    <form action="/Capacitacion/capacitacion-new" method="POST">
+        <div class="form.group">
+            <table>
+            <tr>
+                <td>
+                    <p>
+                        <labe for="No.Empleado">No. Empleado</label>
+                        <input type="text" name="NoEmpleado" autofocus>
+                    </p>
+                    
+                    <p>
+                        <label for="Calificacion">Calificación</label>
+                        <input type="number" name="Calificacion"> 
+                    </p>
+                    
+                    <p>
+                        <label for="VideoBienvenida">Video de Bienvenida</label>
+                        <input type="text" name="VideoBienvenida"> 
+                    </p>
+                    <p>
+                        <label for="Video5Bases">Video 5 Bases</label>
+                        <input type="text" name="Video5Bases"> 
+                    </p>
+                    <p>
+                        <label for="VideoEcosistema">Video Ecosistema Recorre</label>
+                        <input type="text" name="VideoEcosistema"> 
+                    </p>
+                    <p>
+                        <label for="Onboarding">Onboarding</label>
+                        <input type="text" name="Onboarding"> 
+                    </p>
+                    
+                    <p>
+                        <label for="FechaCapacitacionCliente">Fecha Capacitacion con Cliente</label>
+                        <input type="text" name="FechaCapacitacionCliente"> 
+                    </p>
+                    <p>
+                        <label for="FechaCapacitacionSupervisor">Fecha Capacitacion con Supervisor</label>
+                        <input type="text" name="FechaEntrevista"> 
+                    </p>
+                    <p>
+                        <label for="FechaTerminoCapacitacion">Fecha Termino de la Capacitacion</label>
+                        <input type="text" name="FechaTerminoCapacitacion"> 
+                    </p>
+                    </td>
+            </tr>
+    </table>
+    </div> 
+    <div class="form.group">
+    <button class="btn btn-primary btn-block" type="submit">
+            Save
+        </button> 
+    </div>
+</form>
+</div>        
+</div>
+</div>

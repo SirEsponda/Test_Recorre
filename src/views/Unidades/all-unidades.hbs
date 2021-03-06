@@ -1,0 +1,48 @@
+<div class="row">
+    {{#each camioneta }}
+        <div class="col-md-6" >
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">{{ NoUnidad }}</h1>
+            <table>
+                 <tr>
+                    <td>
+                    <p>{{ Placas }}</p>
+                    <p>{{ NoCircula }}</p>
+                    <p>{{ Verificacion }}</p>
+                    <p>{{ ValorFactura }}</p>
+                    <p>{{ Serie }}</p>
+                    <p>{{ Marca }}</p>
+                    <p>{{ SubMarca }}</p>
+                    <p>{{ Modelo }}</p>
+                    <p>{{ NoMotor }}</p>
+                    <p>{{ Poliza }}</p>
+                    </td>
+                    <td>
+                    <p>{{ Seguro }}</p>
+                    <p>{{ Vigencia }}</p>
+                    <p>{{ Beneficiario }}</p>
+                    <p>{{ Prestamo }}</p>
+                    <p>{{ Credito }}</p>
+                    <p>{{ Mensualidad }}</p>
+                    <p>{{ Plazo }}</p>
+                    <p>{{ Contrato }}</p>
+                    <p>{{ FormaPag }}</p>
+                    <p>{{ OBD }}</p>
+                    </td>
+                    <td>
+                    <label for="">Fecha de Registro</label>
+                    <p>{{ Date }}</p>
+                    </td>
+                    </tr>
+             </table>
+        </div>
+       </div>
+ </div>
+{{/each}}
+<p>
+<div class="form.group">
+<a href="http://localhost:3000/unidades/add" class="btn btn-primary btn-lg">Agregar Nueva Unidad</a>    
+</div>
+</p> 
+</div>
