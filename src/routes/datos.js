@@ -1,7 +1,7 @@
 const express = require  ('express');
 const router = express.Router();
 
-const Emple = require('../models/Employee');
+
 
 // Controller
 const {
@@ -10,7 +10,8 @@ const {
     deleteEmployee,
     renderEmployeeForm,
     createNewEmployee,
-    renderEmployee
+    renderEmployee,
+    findEmployee
     } = require("../Controllers/datos");
 
 
@@ -33,7 +34,8 @@ router.put("/Empleados/edit-employee/:id",updateEmployee);
 
 
 //Buscar un Empleado
-
+router.get("/datos/find/:NoEmpleado", findEmployee);
+router.get("/Empleados/find_employee", findEmployee);
 
 
  module.exports = router;

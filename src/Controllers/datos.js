@@ -7,6 +7,8 @@ datosCtrl.renderEmployeeForm = (req, res) => {
     res.render("Empleados/new-employee");
   };
 
+
+
 datosCtrl.createNewEmployee = async (req, res) => {
     const { NoEmpleado , Activo, Nombre, PrimerApellido, SegundoApellido, Email, FechaEntrevista,
         Direccion, Colonia, Municipio, CP, Estado, Pais, FechaNacimiento, EstadoNacimiento, Nacionalidad,
@@ -108,6 +110,53 @@ datosCtrl.deleteEmployee = async (req, res) => {
     await Emple.findByIdAndDelete(req.params.id);
     res.redirect("/datos");
 };
+
+datosCtrl.findEmployee = async (req, res) => {
+    await Emple.find({'NoEmpleado': NoEmpleado})
+    .then(documentos => {
+        const datos = {
+            empleado: documentos.map(documentos => {
+                return {
+                    _id: documentos._id,
+                    NoEmpleado: documentos.NoEmpleado,
+                    Activo: documentos.Activo,
+                    Nombre: documentos.Nombre,
+                    PrimerApellido: documentos.PrimerApellido,
+                    SegundoApellido: documentos.SegundoApellido,
+                    Email: documentos.Email,
+                    FechaEntrevista: documentos.FechaEntrevista,
+                    Direccion: documentos.Direccion,
+                    Colonia: documentos.Colonia,
+                    Municipio: documentos.Municipio,
+                    CP: documentos.CP,
+                    Estado: documentos.Estado,
+                    Pais: documentos.Pais,
+                    FechaNacimiento: documentos.FechaNacimiento, 
+                    EstadoNacimiento: documentos.EstadoNacimiento, 
+                    Nacionalidad: documentos.Nacionalidad,
+                    Genero: documentos.Genero, 
+                    EstadoCivil: documentos.EstadoCivil, 
+                    NivelEstudios: documentos.NivelEstudios, 
+                    CelularP: documentos.CelularP, 
+                    IMEI: documentos.IMEI, 
+                    CEDIS: documentos.CEDIS, 
+                    Puesto: documentos.Puesto, 
+                    IMSS: documentos.IMSS, 
+                    CURP: documentos.CURP, 
+                    RFC: documentos.RFC, 
+                    Constancias: documentos.Constancias,
+                    Retencion_Info: documentos.Retencion_Info, 
+                    Comprobante_Estudios: documentos.Comprobante_Estudios,
+                    Date: documentos.Date
+                }
+            })
+        }
+    console.log(datos);
+    res.render('Empleados/find_employee', { empleado: datos.empleado })
+    })
+};
+
+
 
 
   
