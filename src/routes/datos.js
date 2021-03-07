@@ -34,8 +34,7 @@ router.put("/Empleados/edit-employee/:id",updateEmployee);
 
 
 //Buscar un Empleado
-router.get("/datos/find/:NoEmpleado", findEmployee);
-router.get("/Empleados/find_employee", findEmployee);
+
 
 
  module.exports = router;
