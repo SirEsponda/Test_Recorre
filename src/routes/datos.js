@@ -11,7 +11,8 @@ const {
     renderEmployeeForm,
     createNewEmployee,
     renderEmployee,
-    findEmployee
+    findEmployee,
+    findEmployeeForm
     } = require("../Controllers/datos");
 
 
@@ -34,6 +35,8 @@ router.put("/Empleados/edit-employee/:id",updateEmployee);
 
 
 //Buscar un Empleado
+router.get("/datos/find", findEmployeeForm);
+router.post("/Empleados/find_employees", findEmployee)
 
 
 

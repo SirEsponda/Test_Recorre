@@ -109,6 +109,15 @@ datosCtrl.deleteEmployee = async (req, res) => {
     res.redirect("/datos");
 };
 
+datosCtrl.findEmployeeForm = async (req, res) => {
+    res.render("Empleados/find_employees");
+  };
+
+
+
+datosCtrl.findEmployee = async (req, res) => {
+}
+
 module.exports = datosCtrl;
 
 
