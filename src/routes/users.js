@@ -6,7 +6,7 @@ const {
   renderSigninForm,
   signin,
   logout
-} = require("../Controllers/Users");
+} = require("../Controllers/users");
 
 // Routes
 router.get("/Users/signup", renderSignUpForm);
