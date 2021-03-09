@@ -1,0 +1,59 @@
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+<h1 align="center">Editar Capacitación</h1>
+<div>
+  <form action="/Capacitacion/edit-capacitacion/{{emplo._id}}?_method=PUT" method="POST">
+  <input type="hidden" name="_method" method="PUT">
+  <div>
+    <label for="">No. Empleado</label> <br>
+    <label name="NoEmpleado"><strong>{{emplo.NoEmpleado}}</strong></label>
+  </div>
+  <div>
+    <label for="">Calificación</label>
+    <textarea type="text" name="Calificacion" class="form-control">{{emplo.Calificacion}}</textarea>
+  </div>
+  <div>
+    <label for="">Video de Bienvenida</label>
+    <textarea type="text" name="VideoBienvenida" class="form-control">{{emplo.VideoBienvenida}}</textarea>
+  </div>
+  <div>
+    <label for="">Video 5 Bases</label>
+    <textarea type="text" name="Video5Bases" class="form-control">{{emplo.Video5Bases}}</textarea>
+  </div>
+  <div>
+    <label for="">Video Ecosistema</label>
+    <textarea type="text" name="VideoEcosistema" class="form-control">{{emplo.VideoEcosistema}}</textarea>
+  </div>
+  <div>
+    <label for="">Onboarding</label>
+    <textarea type="text" name="Onboarding" class="form-control">{{emplo.Onboarding}}</textarea>
+  </div>
+  <div>
+    <label for="">Fecha de Capacitacion con Cliente</label>
+    <textarea type="text" name="FechaCapacitacionCliente" class="form-control">{{emplo.FechaCapacitacionCliente}}</textarea>
+  </div>
+   <div>
+    <label for="">Fecha de Capacitacion con Supervisor</label>
+    <textarea type="text" name="FechaCapacitacionSupervisor" class="form-control">{{emplo.FechaCapacitacionSupervisor}}</textarea>
+  </div>
+  <div>
+    <label for="">Fecha de Termino de la Capacitacion</label>
+    <textarea type="text" name="FechaTerminoCapacitacion" class="form-control">{{emplo.FechaTerminoCapacitacion}}</textarea>
+  </div>
+  <div>
+    <label for="">Fecha de Actualización</label> <br>
+    <input type="datetime-local" name="Date" class="form-control" value="{{emplo.Date}}"/>
+  </div>
+  <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+</div>

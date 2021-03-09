@@ -1,33 +1,48 @@
 <div class="row">
-    {{#each empleado }}
-        <div class="col-md-6" >
-            <div class="card">
-                <div class="card-body">
-                    <h1 class="card-title">{{ NoEmpleado }}</h1>
-            <table>
-                <tr>
-                    <td>
-                    <p>{{ Calificacion }}</p>
-                    <p>{{ VideoBienvenida }}</p>
-                    <p>{{ Video5Bases }}</p>
-                    <p>{{ VideoEcosistema }}</p>
-                    <p>{{ Onboarding }}</p>
-                    <p>{{ FechaCapacitacionCliente }}</p>
-                    <p>{{ FechaCapacitacionSupervisor }}</p>
-                    <p>{{ FechaTerminoCapacitacion }}</p>
-                    <label for="">Fecha de Registro</label>
-                    <P>{{ Date }}</p>
-                    </td>
-                    
-                </tr>
-             </table>
-        </div>
-       </div>
- </div>
-{{/each}}
-<p>
-<div class="form.group">
-<a href="http://localhost:3000/capacitacion/add" class="btn btn-primary btn-lg">Agregar Nueva Capacitación</a>    
+    <div>
+        <table id="TableDatos" class="" cellspacing="5" border="3" style="border-collapse:separate" align="center" style="will-change: auto;">
+            
+             <tbody>
+                 <tr align="center" style="background-color: honeydew;">
+                        <th scope="col">No. Empleado</th>
+                        <th scope="col">Calificacion</th>
+                        <th scope="col">Video Bienvenida a Re-Corre!</th>
+                        <th scope="col">Video 5 Bases de Re-Corre!</th>
+                        <th scope="col">Video Ecosistema Re-Corre!</th>
+                        <th scope="col">Capacitación de Onboarding</th>
+                        <th scope="col">Fecha Capacitación del Cliente</th>
+                        <th scope="col">Fecha de Capacitación con Supervisor</th>
+                        <th scope="col">Fecha de Termino de la Capacitación (Ingreso)</th>
+                        <th scope="col">Fecha del Registro</th>
+                        <th scope="col">Editar Capacitación</th>
+                        <th scope="col">Eliminar Empleado</th>
+                    </tr>  
+                    {{#each empleado }}
+                    <tr style="background-color:honeydew" align="center" style="width: auto;" style="height: auto;">
+                        <td>{{ NoEmpleado }}
+                            <a href="/capacitacion/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                        </td>
+                        <td>{{ Calificacion }}</td>
+                        <td>{{ VideoBienvenida }}</td>
+                        <td>{{ Video5Bases }}</td>
+                        <td>{{ VideoEcosistema }}</td>
+                        <td>{{ Onboarding }}</td>
+                        <td>{{ FechaCapacitacionCliente }}</td>
+                        <td>{{ FechaCapacitacionSupervisor }}</td>
+                        <td>{{ FechaTerminoCapacitacion }}</td>
+                        <td>{{ Date }}</td>
+                        <td>
+                         <a href="/capacitacion/edit/{{_id}}"><i class="fas fa-edit"> Editar Empleado</i></a>
+                        </td>
+                        <td> 
+                        <form action="/capacitacion/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+        </form>
+                        </td>
+                        {{/each}}
+                </tbody>
+        </table>
+    </div>
 </div>
-</p> 
-</div>
+    
