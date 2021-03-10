@@ -29,7 +29,7 @@ router.get("/unidades/edit/:id", renderUnidadtForm);
 router.put("/Unidades/edit-unidad/:id",updateUnidad);
 
 
-//Buscar una Capacitacion
+//Buscar una Unidad
 
 
 

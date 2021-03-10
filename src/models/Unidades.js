@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const UnidadesSchema = new Schema ( {
-    NoUnidad: {type: String, require:true, unique:true} ,
+    NoUnidad: {type: String, require:true, unique:true}, 
     Placas: {type: String, require:true, unique:true},
     NoCircula: {type: String, require:true},
     Verificacion: {type: String, require:true},

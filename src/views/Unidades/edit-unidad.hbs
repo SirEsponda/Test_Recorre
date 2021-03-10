@@ -1,0 +1,110 @@
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+<h1 align="center">Editar Unidad</h1>
+<div>
+  <form action="/Unidades/edit-unidad/{{emplo._id}}?_method=PUT" method="POST">
+  <input type="hidden" name="_method" method="PUT">
+  <div>
+    <label for="">No. Unidad</label> <br>
+    <label><strong>{{emplo.NoUnidad}}</strong></label>
+  </div>
+  <div>
+    <label for="">Placas</label>
+    <textarea type="text" name="Placas" class="form-control">{{emplo.Placas}}</textarea>
+  </div>
+  <div>
+    <label for="">No Circula</label>
+    <textarea type="text" name="NoCircula" class="form-control">{{emplo.NoCircula}}</textarea>
+  </div>
+  <div>
+    <label for="">Verificación</label>
+    <textarea type="text" name="Verificacion" class="form-control">{{emplo.Verificacion}}</textarea>
+  </div>
+  <div>
+    <label for="">ValorFactura</label>
+    <textarea type="text" name="ValorFactura" class="form-control">{{emplo.ValorFactura}}</textarea>
+  </div>
+  <div>
+    <label for="">Serie</label>
+    <textarea type="text" name="Serie" class="form-control">{{emplo.Serie}}</textarea>
+  </div>
+  <div>
+    <label for="">Marca</label>
+    <textarea type="text" name="Marca" class="form-control">{{emplo.Marca}}</textarea>
+  </div>
+   <div>
+    <label for="">SubMarca</label>
+    <textarea type="text" name="SubMarca" class="form-control">{{emplo.SubMarca}}</textarea>
+  </div>
+  <div>
+    <label for="">Modelo</label>
+    <textarea type="text" name="Modelo" class="form-control">{{emplo.Modelo}}</textarea>
+  </div>
+  <div>
+    <label for="">No Motor</label>
+    <textarea type="text" name="NoMotor" class="form-control">{{emplo.NoMotor}}</textarea>
+  </div>
+  <div>
+    <label for="">Poliza</label>
+    <textarea type="text" name="Poliza" class="form-control">{{emplo.Poliza}}</textarea>
+  </div>
+  <div>
+    <label for="">Seguro</label>
+    <textarea type="text" name="Seguro" class="form-control">{{emplo.Seguro}}</textarea>
+  </div>
+  <div>
+    <label for="">Vigencia</label>
+    <textarea type="text" name="Vigencia" class="form-control">{{emplo.Vigencia}}</textarea>
+  </div>
+  <div>
+    <label for="">Beneficiario</label>
+    <textarea type="text" name="Beneficiario" class="form-control">{{emplo.Beneficiario}}</textarea>
+  </div>
+  <div>
+    <label for="">Prestámo</label>
+    <textarea type="text" name="Prestamo" class="form-control">{{emplo.Prestamo}}</textarea>
+  </div>
+  <div>
+    <label for="">Credíto</label>
+    <textarea type="text" name="Credito" class="form-control">{{emplo.Credito}}</textarea>
+  </div>
+  <div>
+    <label for="">Mensualidad</label>
+    <textarea type="text" name="Mensualidad" class="form-control">{{emplo.Mensualidad}}</textarea>
+  </div>
+  <div>
+    <label for="">Plazo</label>
+    <textarea type="text" name="Plazo" class="form-control">{{emplo.Plazo}}</textarea>
+  </div>
+  <div>
+    <label for="">Contrato</label>
+    <textarea type="text" name="Contrato" class="form-control">{{emplo.Contrato}}</textarea>
+  </div>
+  <div>
+    <label for="">Forma de Pago</label>
+    <textarea type="text" name="FormaPag" class="form-control">{{emplo.FormaPag}}</textarea>
+  </div>
+  <div>
+    <label for="">OBD2</label>
+    <textarea type="text" name="OBD2" class="form-control">{{emplo.OBD2}}</textarea>
+  </div>
+ <div>
+    <label for="">Fecha de Actualización</label> <br>
+    <input type="datetime-local" name="Date" class="form-control" value="{{emplo.Date}}"/>
+  </div>
+  
+
+<div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+</div>
+

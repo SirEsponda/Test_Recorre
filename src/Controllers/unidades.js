@@ -4,7 +4,7 @@ const datosCtrl = {};
 const Unidad = require("../models/Unidades");
 
 datosCtrl.renderUnidadForm = (req, res) => {
-    res.render("Unidades/new-unidades");
+    res.render("Unidades/new-unidad");
   };
 
 datosCtrl.createNewUni = async (req, res) => {
@@ -20,12 +20,12 @@ datosCtrl.createNewUni = async (req, res) => {
        if (errors.length > 0)
        {
        res.render('Unidades/new-unidad', {
-       errors,NoUnidad
+       errors, NoUnidad
        });
        }   else {
            const NewUnidad = new Unidad ({ NoUnidad, Placas, NoCircula, Verificacion, ValorFactura, Serie, Marca, SubMarca,
            Modelo, NoMotor, Poliza, Seguro, Vigencia, Beneficiario, Prestamo, Credito, Mensualidad,
-           Plazo, Contrato, FormaPag, OBD, Date });
+           Plazo, Contrato, FormaPag, OBD2, Date });
            await NewUnidad.save();
            res.redirect('/unidades');
            }
@@ -75,13 +75,13 @@ datosCtrl.renderUnidadtForm = async (req, res) => {
 };
 
 datosCtrl.updateUnidad = async (req, res) => {
-    const { NoUnidad , Placas , NoCircula, Verificacion, ValorFactura, Serie, Marca, SubMarca,
+    const {Placas , NoCircula, Verificacion, ValorFactura, Serie, Marca, SubMarca,
         Modelo, NoMotor, Poliza, Seguro, Vigencia, Beneficiario, Prestamo, Credito, Mensualidad,
         Plazo, Contrato, FormaPag, OBD2, Date  }= req.body;
         console.log(req.body);
         
 
-    await Unidad.findByIdAndUpdate(req.params.id, { NoUnidad , Placas , NoCircula, Verificacion, ValorFactura, Serie, Marca, SubMarca,
+    await Unidad.findByIdAndUpdate(req.params.id, {Placas , NoCircula, Verificacion, ValorFactura, Serie, Marca, SubMarca,
         Modelo, NoMotor, Poliza, Seguro, Vigencia, Beneficiario, Prestamo, Credito, Mensualidad,
         Plazo, Contrato, FormaPag, OBD2, Date }); 
         console.log(req.body);
@@ -92,3 +92,5 @@ datosCtrl.deleteUnidad = async (req, res) => {
     await Unidad.findByIdAndDelete(req.params.id);
     res.redirect("/unidades");
 };
+
+module.exports = datosCtrl;

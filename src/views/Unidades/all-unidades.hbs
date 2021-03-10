@@ -32,7 +32,7 @@
                     {{#each camioneta }}
                     <tr style="background-color:honeydew" align="center" style="width: auto;" style="height: auto;">
                         <td>{{ NoUnidad }}
-                            <a href="/capacitacion/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                            <a href="/unidades/edit/{{_id}}"><i class="fas fa-edit"></i></a>
                         </td>
                         <td>{{ Placas }}</td>
                         <td>{{ NoCircula }}</td>
@@ -56,10 +56,10 @@
                         <td>{{ OBD2 }}</td>
                         <td>{{ Date }}</td>
                         <td>
-                         <a href="/capacitacion/edit/{{_id}}"><i class="fas fa-edit"> Editar Empleado</i></a>
+                         <a href="/unidades/edit/{{_id}}"><i class="fas fa-edit"> Editar Empleado</i></a>
                         </td>
                         <td> 
-                        <form action="/capacitacion/delete/{{_id}}?_method=DELETE" method="POST">
+                        <form action="/unidades/delete/{{_id}}?_method=DELETE" method="POST">
           <input type="hidden" name="_method" value="DELETE">
           <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
         </form>
@@ -68,4 +68,9 @@
                 </tbody>
         </table>
     </div>
+    <div class="dropdown-child" align="center">
+    <a href="http://localhost:3000/unidades/add" class="btn btn-primary btn-lg" >Agregar Nueva Unidad</a> 
+   
+    
+  </div>
 </div>
