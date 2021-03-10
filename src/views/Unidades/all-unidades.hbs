@@ -1,48 +1,71 @@
 <div class="row">
-    {{#each camioneta }}
-        <div class="col-md-6" >
-            <div class="card">
-                <div class="card-body">
-                    <h1 class="card-title">{{ NoUnidad }}</h1>
-            <table>
-                 <tr>
-                    <td>
-                    <p>{{ Placas }}</p>
-                    <p>{{ NoCircula }}</p>
-                    <p>{{ Verificacion }}</p>
-                    <p>{{ ValorFactura }}</p>
-                    <p>{{ Serie }}</p>
-                    <p>{{ Marca }}</p>
-                    <p>{{ SubMarca }}</p>
-                    <p>{{ Modelo }}</p>
-                    <p>{{ NoMotor }}</p>
-                    <p>{{ Poliza }}</p>
-                    </td>
-                    <td>
-                    <p>{{ Seguro }}</p>
-                    <p>{{ Vigencia }}</p>
-                    <p>{{ Beneficiario }}</p>
-                    <p>{{ Prestamo }}</p>
-                    <p>{{ Credito }}</p>
-                    <p>{{ Mensualidad }}</p>
-                    <p>{{ Plazo }}</p>
-                    <p>{{ Contrato }}</p>
-                    <p>{{ FormaPag }}</p>
-                    <p>{{ OBD }}</p>
-                    </td>
-                    <td>
-                    <label for="">Fecha de Registro</label>
-                    <p>{{ Date }}</p>
-                    </td>
-                    </tr>
-             </table>
-        </div>
-       </div>
- </div>
-{{/each}}
-<p>
-<div class="form.group">
-<a href="http://localhost:3000/unidades/add" class="btn btn-primary btn-lg">Agregar Nueva Unidad</a>    
-</div>
-</p> 
+    <div>
+        <table id="TableDatos" class="" cellspacing="5" border="3" style="border-collapse:separate" align="center" style="will-change: auto;">
+            
+             <tbody>
+                 <tr align="center" style="background-color: honeydew;">
+                        <th scope="col">No. Unidad</th>
+                        <th scope="col">Placas</th>
+                        <th scope="col">Hoy No Circula</th>
+                        <th scope="col">Verificacion</th>
+                        <th scope="col">Valor Factura</th>
+                        <th scope="col"> Serie</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">SubMarca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">No. de Motor</th>
+                        <th scope="col">Poliza</th>
+                        <th scope="col">Seguro</th>
+                        <th scope="col">Vigencia</th>
+                        <th scope="col">Beneficiario</th>
+                        <th scope="col">Prestámo</th>
+                        <th scope="col">Credíto</th>
+                        <th scope="col">Mensualidad</th>
+                        <th scope="col">Plazo</th>
+                        <th scope="col">Contrato</th>
+                        <th scope="col">Forma de Pago</th>
+                        <th scope="col">OBD2</th>
+                        <th scope="col">Fecha del Registro</th>
+                        <th scope="col">Editar Capacitación</th>
+                        <th scope="col">Eliminar Empleado</th>
+                    </tr>  
+                    {{#each camioneta }}
+                    <tr style="background-color:honeydew" align="center" style="width: auto;" style="height: auto;">
+                        <td>{{ NoUnidad }}
+                            <a href="/capacitacion/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                        </td>
+                        <td>{{ Placas }}</td>
+                        <td>{{ NoCircula }}</td>
+                        <td>{{ Verificacion }}</td>
+                        <td>{{ ValorFactura }}</td>
+                        <td>{{ Serie }}</td>
+                        <td>{{ Marca }}</td>
+                        <td>{{ SubMarca }}</td>
+                        <td>{{ Modelo }}</td>
+                        <td>{{ NoMotor }}</td>
+                        <td>{{ Poliza }}</td>
+                        <td>{{ Seguro }}</td>
+                        <td>{{ Vigencia }}</td>
+                        <td>{{ Beneficiario }}</td>
+                        <td>{{ Prestamo }}</td>
+                        <td>{{ Credito }}</td>
+                        <td>{{ Mensualidad }}</td>
+                        <td>{{ Plazo }}</td>
+                        <td>{{ Contrato }}</td>
+                        <td>{{ FormaPag }}</td>
+                        <td>{{ OBD2 }}</td>
+                        <td>{{ Date }}</td>
+                        <td>
+                         <a href="/capacitacion/edit/{{_id}}"><i class="fas fa-edit"> Editar Empleado</i></a>
+                        </td>
+                        <td> 
+                        <form action="/capacitacion/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+        </form>
+                        </td>
+                        {{/each}}
+                </tbody>
+        </table>
+    </div>
 </div>

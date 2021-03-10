@@ -10,7 +10,7 @@ datosCtrl.renderUnidadForm = (req, res) => {
 datosCtrl.createNewUni = async (req, res) => {
     const { NoUnidad , Placas , NoCircula, Verificacion, ValorFactura, Serie, Marca, SubMarca,
         Modelo, NoMotor, Poliza, Seguro, Vigencia, Beneficiario, Prestamo, Credito, Mensualidad,
-        Plazo, Contrato, FormaPag, OBD, Date } = req.body;
+        Plazo, Contrato, FormaPag, OBD2, Date } = req.body;
         const errors = [];
        if (!NoUnidad) 
        {
@@ -58,7 +58,7 @@ datosCtrl.createNewUni = async (req, res) => {
                     Plazo: documentos.Plazo, 
                     Contrato: documentos.Contrato, 
                     FormaPag: documentos.FormaPag,
-                    OBD: documentos.OBD,
+                    OBD2: documentos.OBD2,
                     Date: documentos.Date
                 }
             })
@@ -77,13 +77,13 @@ datosCtrl.renderUnidadtForm = async (req, res) => {
 datosCtrl.updateUnidad = async (req, res) => {
     const { NoUnidad , Placas , NoCircula, Verificacion, ValorFactura, Serie, Marca, SubMarca,
         Modelo, NoMotor, Poliza, Seguro, Vigencia, Beneficiario, Prestamo, Credito, Mensualidad,
-        Plazo, Contrato, FormaPag, OBD, Date  }= req.body;
+        Plazo, Contrato, FormaPag, OBD2, Date  }= req.body;
         console.log(req.body);
         
 
     await Unidad.findByIdAndUpdate(req.params.id, { NoUnidad , Placas , NoCircula, Verificacion, ValorFactura, Serie, Marca, SubMarca,
         Modelo, NoMotor, Poliza, Seguro, Vigencia, Beneficiario, Prestamo, Credito, Mensualidad,
-        Plazo, Contrato, FormaPag, OBD, Date }); 
+        Plazo, Contrato, FormaPag, OBD2, Date }); 
         console.log(req.body);
         res.redirect("/unidades");
 };
