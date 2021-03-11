@@ -1,0 +1,51 @@
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+<h1 align="center">Editar Filtros</h1>
+<div>
+  <form action="/Filtros/edit-filtros/{{emplo._id}}?_method=PUT" method="POST">
+  <input type="hidden" name="_method" method="PUT">
+  <div>
+    <label for="">No. Empleado</label> <br>
+    <label><strong>{{emplo.NoEmpleado}}</strong></label>
+  </div>
+  <div>
+    <label for="">Prueba de Manejo</label>
+    <textarea type="text" name="PruebaManejo" class="form-control">{{emplo.PruebaManejo}}</textarea>
+  </div>
+  <div>
+    <label for="">Antidoping</label>
+    <textarea type="text" name="Antidoping" class="form-control">{{emplo.Antidoping}}</textarea>
+  </div>
+  <div>
+    <label for="">Busqueda de Buro Laboral</label>
+    <textarea type="text" name="BBuroLaboral" class="form-control">{{emplo.BBuroLaboral}}</textarea>
+  </div>
+  <div>
+    <label for="">Reporte de Buro Laboral</label>
+    <textarea type="text" name="RBuroLaboral" class="form-control">{{emplo.RBuroLaboral}}</textarea>
+  </div>
+  <div>
+    <label for="">Blacktrust</label>
+    <textarea type="text" name="Blacktrust" class="form-control">{{emplo.Blacktrust}}</textarea>
+  </div>
+  <div>
+    <label for="">Estudio Socio Ecnomico</label>
+    <textarea type="text" name="EstudioSocioEcnomico" class="form-control">{{emplo.EstudioSocioEcnomico}}</textarea>
+  </div>
+  <div>
+    <label for="">Fecha de Actualización</label> <br>
+    <input type="datetime-local" name="Date" class="form-control" value="{{emplo.Date}}"/>
+  </div>
+  <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+</div>

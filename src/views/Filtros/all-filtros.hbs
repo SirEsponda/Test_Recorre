@@ -1,0 +1,50 @@
+<div class="row">
+    <div>
+        <table id="TableDatos" class="" cellspacing="5" border="3" style="border-collapse:separate" align="center" style="will-change: auto;">
+            
+             <tbody>
+                 <tr align="center" style="background-color: honeydew;">
+                        <th scope="col">No. Empleado</th>
+                        <th scope="col">Prueba de Manejo</th>
+                        <th scope="col">Antidoping</th>
+                        <th scope="col">Busqueda de Buro Laboral</th>
+                        <th scope="col">Reporte de Buro Laboral</th>
+                        <th scope="col">Blacktrust</th>
+                        <th scope="col">Estudio Socio Ecnomico</th>
+                        <th scope="col">Fecha del Registro</th>
+                        <th scope="col">Editar Empleado</th>
+                        <th scope="col">Eliminar Empleado</th>
+                    </tr>  
+                    {{#each fil }}
+                    <tr style="background-color:honeydew" align="center" style="width: auto;" style="height: auto;">
+                        <td>{{ NoEmpleado }}
+                            <a href="/filtro/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                        </td>
+                        <td>{{ PruebaManejo }}</td>
+                        <td>{{ Antidoping }}</td>
+                        <td>{{ BBuroLaboral }}</td>
+                        <td>{{ RBuroLaboral }}</td>
+                        <td>{{ Blacktrust }}</td>
+                        <td>{{ EstudioSocioEcnomico }}</td>
+                        <td>{{Date}}</td>
+                        <td>
+                         <a href="/filtro/edit/{{_id}}"><i class="fas fa-edit"> Editar Filtro</i></a>
+                        </td>
+                        <td> 
+                        <form action="/filtro/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+        </form>
+                        </td>
+                        {{/each}}
+                </tbody>
+        </table>
+    </div>
+    
+ <nav class="Navegacion Principal contenedor" align="center"> 
+     <div class="dropdown-child" align="center">
+    <a href="http://localhost:3000/filtro/add" class="btn btn-primary btn-lg" >Agregar Nueva Filtro</a> 
+
+  </div>
+</nav> 
+</div> 

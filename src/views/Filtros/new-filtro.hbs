@@ -1,0 +1,61 @@
+{{#each errors}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/each}}
+<div class="col-md-4 mx-auto">
+</div><div class="title">
+<div class="dato_personales-header">
+    <h1 class="text-center display-4 my-4"> <strong>Filtros</strong></h1>
+    </div>
+    <div class="body">
+    <form action="/Filtros/new-filtro" method="POST">
+        <div class="form.group">
+            <table>
+            <tr>
+                <td>
+                    <p>
+                        <labe for="NoEmpleado">No. Empleado</label>
+                        <input type="text" name="NoEmpleado" autofocus>
+                    </p>
+                    
+                    <p>
+                        <label for="PruebaManejo">Prueba de Manejo</label>
+                        <input type="text" name="PruebaManejo"> 
+                    </p>
+                    
+                    <p>
+                        <label for="Antidoping">Antidoping</label>
+                        <input type="text" name="Antidoping"> 
+                    </p>
+                    <p>
+                        <label for="BBuroLaboral">Busqueda de Buro Laboral</label>
+                        <input type="text" name="BBuroLaboral"> 
+                    </p>
+                    <p>
+                        <label for="RBuroLaboral">Reporte Buro Laboral</label>
+                        <input type="text" name="RBuroLaboral"> 
+                    </p>
+                    <p>
+                        <label for="Blacktrust">Blacktrust</label>
+                        <input type="text" name="Blacktrust"> 
+                    </p>
+                    
+                    <p>
+                        <label for="EstudioSocioEcnomico">Estudio Socio Ecnomico</label>
+                        <input type="text" name="EstudioSocioEcnomico"> 
+                    </p>
+                    </td>
+            </tr>
+    </table>
+    </div> 
+    <div class="form.group">
+    <button class="btn btn-primary btn-block" type="submit">
+            Save
+        </button> 
+    </div>
+</form>
+</div>        
+</div>
+</div>

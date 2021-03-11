@@ -60,6 +60,7 @@ const { createAdminUser } = require("./libs/createUser");
     app.use(require('./routes/capacitacion'));
     app.use(require('./routes/unidades'));
     app.use(require('./routes/files'));
+    app.use(require('./routes/filtros'));
     
     
 
